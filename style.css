@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+/*Global Styles*/
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 40px 10%;
+    background: #f5f5f5;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Container Styles*/
+.container{
+    display:flex
+}
+.main-wrapper{
+    flex: 2;
+}
+.side-bar{
+    background: #ddd;
+    flex: 1;
+    padding: 40px;
+    /*background-color:white;*/
+}
+
+.side-bar ul{
+    padding: 0 40px;
+    list-style: none;
+}
+
+.side-bar{
+    background: rgb(230, 230, 231);
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .side-bar{
+        background: #002b18;
+        color:white !important
+    }
+    .side-bar a{
+        color:white !important
+    }
+}
+
+/*Navigation Menu Style*/
+
+nav.nav-menu {
+    width: 100%;
+    background: #002b18;
+    padding: 10px;
+}
+
+nav.nav-menu ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: clamp(.8rem, 1.2vw, 2rem);
+}
+
+.nav-menu .nav-item {
+    padding: 15px;
+    transition: background-color 500ms ease-in-out;
+}
+
+.nav-menu .nav-item:hover {
+    cursor: pointer;
+    background-color: rgba(221, 221, 221, 0.507);
+}
+
+.nav-menu .nav-item a{
+    text-decoration: none;
+    color: white
+}
+
+/*Main Content Wrapper Styles*/
+
+.main-wrapper {
+    background: white;
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section.head,
+section.youtube-embed {
+    text-align:center
+}
+
+.button-link {
+    display:block;
+    margin: 20px 0 0 0;
+    padding: 10px 40px;
+    width: fit-content;
+    background: #002b18;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s transform ease-in-out;
+}
+
+.button-link:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 40px
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.two-col div{
+    width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        padding: 0;
+    }
+
+    .two-col {
+        flex-direction: column;
+    }
+
+    .two-col div {
+        width: 100%;
+    }
+
+    .main-wrapper {
+        padding: 5%;
+    }
+}
